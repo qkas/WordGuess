@@ -50,8 +50,6 @@ h2 {
     font-size: 32px;
 }
 
-
-
 .wrapper {
     text-align: center;
     width: 500px;
@@ -86,18 +84,24 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .row {
     display: flex;
     margin: 5px 0;
     margin-top: 0;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .keyboard-button {
-    width: 40px;
+    flex-grow: 1;
+    min-width: 5%;
     height: 55px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     border: 1px solid #fff;
     border-radius: 3px;
@@ -109,12 +113,12 @@ h2 {
 
 .delete {
     background-color: rgb(255, 100, 100);
-    width: 70px
+    min-width: 15%;
 }
 
 .enter {
     background-color: rgb(75, 190, 75);
-    width: 100px;
+    min-width: 20%;
 }
 
 @media (max-width: 500px) {
@@ -144,5 +148,8 @@ h2 {
     }
     h2 {
         font-size: 22px;
+    }
+    .keyboard-button {
+        font-size: 16px;
     }
 }
